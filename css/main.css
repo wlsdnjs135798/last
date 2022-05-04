@@ -1,0 +1,265 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+li {list-style: none;}
+a {text-decoration: none; color: #333;}
+body {color: #333;}
+
+/* 모바일*/
+.mobile {display: none;}
+.mobile_menu {display: none;}
+
+
+/* header */
+header {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(51, 50, 50, 0.582);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+header div {
+    max-width: 1440px;
+    width: 95%;
+    height: 100%; /* 높이는 부모에게 설정한 값과 동일하게 가질려면 자식에게 100% 값 지정해줘야함 */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div h1 {
+    line-height: 0;
+}
+
+header div h1 img {
+    width: 200px;
+}
+
+header .pc_menu ul {
+    display: flex;
+}
+
+header .pc_menu ul li a {
+    padding: 0 20px;/* 좌우 */
+    color:#fff;
+}
+
+/* main_visual */
+.main_visual {
+    height: 100vh;
+    position: relative;
+}
+
+.main_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main_visual div {
+    color:rgb(29, 28, 29);
+    mix-blend-mode:overlay;
+    max-width: 1440px;
+    width: 95%;
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main_visual div h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.main_visual div p {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* .cont01 */
+.cont01 {
+    padding: 150px 0;
+}
+
+.cont01 .title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cont01 .title h3 {
+    font-size: 40px;
+}
+
+.cont01 .list {
+    max-width: 1440px;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* 밑으로 나열 시킬 때 */
+}
+
+.cont01 .list div {
+    width: 24%;
+    height: auto;
+    /* 기존에 있는 420px의 고정값을
+    자식이 가지는 영역만큼 자유롭게
+    지닐 수 있도록 설정 */
+    background-color: rgb(243, 176, 94);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.cont01 .list div img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    transform: scale(3);
+    mix-blend-mode: multiply;
+    transition: 1s;
+}
+
+.cont01 .list div:hover img {
+    transform: scale(1);
+    mix-blend-mode: normal;
+}
+
+.cont01 .list div:hover p {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.cont01 .list div:hover h4 {
+    color: rgb(12, 12, 12);
+}
+
+.cont01 .list div a {
+    display: block;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+.cont01 .list div a h4 {
+    width: 100%;
+    font-size: 22px;
+    margin-bottom: 15px;
+    position: relative;
+    /* 본인이 원래 가지고 있던 위치에서 위로 나타나고 싶으면 
+    부모에게 relative를 걸지 말고 본인자체에 바로 relative를 걸어버리면 됨 */
+    z-index: 1;
+    color: #fff;
+}
+
+.cont01 .list div a p {
+    display: none;
+}
+
+footer {
+    padding: 50px 0;
+    background-color: rgb(51, 51, 51);
+    color: rgba(255, 255, 255, 0.514);
+    text-align: center;
+}
+
+/* 중단점 1024px 이하일 때 
+pc 메뉴 사라지고 햄버거 아이콘 적용 */
+@media screen and (max-width: 1024px) {
+    .pc_menu {display: none;}
+    .mobile {
+        display: block;
+        font-size: 35px;
+        color: #fff;
+    }
+    .mobile span {
+        position: absolute;
+        left: -99999999px;
+    }
+
+    /* .cont01 */
+    .cont01 {
+        background-color: rgb(248, 236, 197);
+    }
+    .cont01 .list div {
+        width: 48%;
+        margin-bottom: 40px;
+        background-color: #fff;
+    }
+
+    .cont01 .list div img {
+        transform: scale(1);
+        height: 300px;
+    }
+
+    .cont01 .list div a {
+        height: auto;
+        padding: 20px;      
+        box-sizing: border-box;
+    }
+
+    .cont01 .list div a h4 {
+        color: #333;
+    }
+
+    .cont01 .list div a p {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+/* 640px 이하일때 중단점 */
+@media screen and (max-width:640px) {
+
+    /* .cont01 */
+    .cont01 {
+        padding: 80px 0;
+    }
+
+    .cont01 .list div {
+        width: 100%;
+    }
+
+    .main_visual div h2 {
+        font-size: 32px;
+    }
+
+    .main_visual div p {
+        font-size: 16px;
+    }
+}
+
+/* aside */
+aside {
+    position: fixed;
+    bottom: 70px;
+    right: 50px;
+}
+
+aside ul li {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    margin-top: 10px;
+    box-shadow: 2px 3px 10px rgb(100, 100, 100);
+}
+
+aside ul li a {
+    display: block;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 레이아웃</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link href="css/main.css" rel="stylesheet"/> 
+</head>
+<body id="top">
+    <header>
+        <div>
+            <h1>
+                <a href="#">
+                    <img src="images/panstar.png" alt="팬스타로고"/>
+                </a>
+            </h1>
+
+            <nav class="pc_menu">
+                <ul>
+                    <li><a href="#">팬스타소개</a></li>
+                    <li><a href="#">사업분야</a></li>
+                    <li><a href="#">고객지원</a></li>
+                    <li><a href="#">미디어센터</a></li>
+                    <li><a href="#">인재채용</a></li>
+                </ul>
+            </nav><!-- .pc_menu end -->
+
+            <!-- p태그는 안됨 i(인라인요소) 안에 p(블럭요소)가 적용안됨 -->
+            <i class="mobile xi-bars"><span>메뉴보기</span></i>
+            <nav class="mobile_menu">
+                <ul>
+                    <li><a href="#">팬스타소개</a></li>
+                    <li><a href="#">사업분야</a></li>
+                    <li><a href="#">고객지원</a></li>
+                    <li><a href="#">미디어센터</a></li>
+                    <li><a href="#">인재채용</a></li>
+                </ul>
+            </nav><!-- .mobile_menu end -->
+        </div>
+    </header>
+
+    <section class="main_visual">
+        <img src="images/spring04.jpg" alt="봄" />
+        <div>
+            <h2>OVER THE NETWORK</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br /> Ab adipisci, dolores deserunt facilis excepturi quasi illo ipsum ex beatae quaerat ullam unde ducimus suscipit. <br /> Placeat amet sed dolor repellat quas?</p> <!-- br태그 이용해서 문단 띄워쓰기 하고 싶은 곳에 넣어주기 -->
+        </div>
+    </section><!-- .main_visual end -->
+
+    <section class="cont01">
+        <div class="title">
+            <h3>section title</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br /> Provident tempore repellat fugiat! Sed eum corrupti repellendus?</p>
+        </div><!-- .title end -->
+
+        <div class="list">
+            <div>
+            <img src="images/spring05.jpg" alt="봄꽃5"/>
+            <a href="#">
+                <h4>고속화물페리</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est sunt accusamus eligendi voluptatem, optio natus autem laudantium numquam fugiat? Explicabo voluptatem cumque sunt exercitationem pariatur ipsa doloribus accusantium commodi vitae!</p>
+            </a>
+            </div>
+
+            <div>
+            <img src="images/spring06.jpg" alt="봄꽃6"/>
+            <a href="#">
+                <h4>크루즈여행</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est sunt accusamus eligendi voluptatem, optio natus autem laudantium numquam fugiat? Explicabo voluptatem cumque sunt exercitationem pariatur ipsa doloribus accusantium commodi vitae!</p>
+            </a>
+            </div>
+
+            <div>
+            <img src="images/spring07.jpg" alt="봄꽃7"/>
+            <a href="#">
+                <h4>국제특송</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est sunt accusamus eligendi voluptatem, optio natus autem laudantium numquam fugiat? Explicabo voluptatem cumque sunt exercitationem pariatur ipsa doloribus accusantium commodi vitae!</p>
+            </a>
+            </div>
+
+            <div>
+            <img src="images/spring08.jpg" alt="봄꽃8"/>
+            <a href="#">
+                <h4>자동차정비기기</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est sunt accusamus eligendi voluptatem, optio natus autem laudantium numquam fugiat? Explicabo voluptatem cumque sunt exercitationem pariatur ipsa doloribus accusantium commodi vitae!</p>
+            </a>
+            </div>
+        </div><!-- .list end -->       
+    </section><!-- .cont01 end -->
+
+    <footer id="bottom"> <!-- 태그에 설정했던 해시값과 동일한 명칭 가지고 있으면 서로 연결이 가능함 -->
+        copyright 2022 강진원. All rights reserved.
+    </footer>
+
+    <aside><!-- 컨텐츠 영역이 아니라 그외의 영역=따로 분리되는 영역 -->
+        <ul>
+            <li><a href="#top">위로</a></li>
+            <li><a href="#bottom">밑으로</a></li>
+        </ul>
+    </aside>
+</body>
+</html>
